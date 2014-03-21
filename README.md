@@ -2,8 +2,10 @@
 
 Create an app for organizing your expenses. Here are some user stories for you - build one at a time before moving to the next one:
 
-*As a user, I want to enter an expense, so I can keep track of where I'm spending my money. I should be able to provide a description (for example, "Burgers"), an amount ($7.56), and the date I made the purchase.
-*As a user, I want to choose a single category for each expense, so I can label out where I'm spending my money.
+*As a user, I want to enter an expense, so I can keep track of where I'm spending my money. I should be able to provide a description (for example, "Burgers"), an amount ($7.56), and the date I made the purchase. (COMPLETE)
+
+*As a user, I want to choose a single category for each expense, so I can label out where I'm spending my money. (COMPLETE)
+
 *As a user, I want to show what percentage of my money I spent in each category, so I can know where I'm wasting all of my money.
 *As a user, I want to choose multiple categories for each expense, because life is not so simple.
 *As a user, I want to label what company I made each purchase from, so that I can see which companies are profiting from my poor budgeting.
@@ -16,7 +18,10 @@ Create an app for organizing your expenses. Here are some user stories for you -
 ##Progress:
 
 *created a Purchase class with:
-- initialize method (passing)
-- create, save, all, and == methods (failing) - spec for 'create' and '==' failed
-- needs spec for 'all' and 'save'
--needs delete method
+- initialize, save, all, and == methods, all passing with specs
+
+*created a Category class with:
+- initialize, save, all, and == methods, all passing with specs
+
+*created an add_category method in the Purchase class to associate a purchase with a category, passing with specs
+
