@@ -1,3 +1,5 @@
+require "pry"
+
 class Category
 
   attr_reader :type, :id
@@ -19,6 +21,30 @@ class Category
       categories << Category.new(result)
     end
     categories
+  end
+
+  def expense_percentage
+    total_all = 0
+    total_cat = 0
+    purchase_array = []
+    purchase_ids = []
+    purchases = []
+
+    all_purchases = DB.exec("SELECT * FROM purchase;")
+    all_purchases.each do |result|
+      total_all += result['amount'].to_i
+    end
+    purchase_array << DB.exec("SELECT * FROM purchase_category WHERE category_id = #{self.id};")
+    purchase_array.each do |result|
+      purchase_ids << result['purchase_id'].to_i
+    end
+    purchase_ids.each do |purchase_id|
+      purchases << DB.exec("SELECT * FROM purchase WHERE id = #{purchase_id};")
+    end
+    purchases.each do |purchase|
+      total_cat += purchase['amount'].to_i
+    end
+  percent = total_cat/total_all
   end
 
   def ==(another_category)
