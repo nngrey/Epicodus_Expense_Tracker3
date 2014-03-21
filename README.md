@@ -11,3 +11,12 @@ Create an app for organizing your expenses. Here are some user stories for you -
 *As a user, I want to filter my spending reports by time period, so that I can know how my spending habits have changed over time.
 *As a user, I want to set a monthly budget for each category, so that I can create goals for my spending.
 *As a user, I want to see if I've exceeded my budget for each category, each month.
+
+
+##Progress:
+
+*created a Purchase class with:
+- initialize method (passing)
+- create, save, all, and == methods (failing) - spec for 'create' and '==' failed
+- needs spec for 'all' and 'save'
+-needs delete method
